@@ -27,7 +27,6 @@
     function attachEvents() {
         $('#btnAdd').click(addTown);
         $('#btnDelete').click(deleteTowns);
-
         function deleteTowns() {
             let townToDelete = $('#towns option:selected');
             townToDelete.remove();
@@ -36,10 +35,8 @@
             let townToAdd = $('#newItem').val();
             if(townToAdd === '') return;
             let towns = $('#towns');
-           towns.append($('<option>').text(townToAdd))
+            towns.append($('<option>').text(townToAdd))
             $('#newItem').val('');
-
-
         }
     }
 </script>

@@ -18,11 +18,11 @@ class Record{
             `Relative Humidity: ${this.humidity}%\n` +
             `Pressure: ${this.pressure}hpa\n` +
             `Wind Speed: ${this.windSpeed}m/s\n` +
-            `Weather: ${this.weather()}`
+            `Weather: ${this.weather}`
 
     }
 
-    weather(){
+   get weather(){
         if(this.temperature < 20 && (this.pressure < 700 || this.pressure > 900) && this.windSpeed > 25)
             return `Stormy`;
         return 'Not stormy'
